@@ -31,15 +31,12 @@
         return value > 50;
     });
     console.log(`Here is the array for every number above 50 = ${over50}`);
-    // Replaced for loop with filter
-    let sum = my
-    myArray2 = [13,25,10,43,435];
-    let sum = 0;
-    for(let index = 0; index < myArray.length + 1; index++){
-      sum = sum + myArray[index];
-    }
 
-    console.log("The total value of the array is " + sum);
+    // Replaced for loop with sum
+    let sum = myArray.reduce(function(sum,value){
+      return sum + value;
+    })
+    console.log(`The total value of the array is ${sum}`);
   </script>
 </head>
 <body>
