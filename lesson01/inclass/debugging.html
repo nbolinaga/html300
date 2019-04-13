@@ -9,30 +9,30 @@
 
     const myArray = [13,25,10,43,435];
 
-    // Replaced for loop with forEach
+    // Replaced for loop with .forEach
     myArray.forEach(function(value){
       console.log(value);
     });
 
-    // Replaced for loop with map
+    // Replaced for loop with .map
     let results = myArray.map(function(value){
        return value + 15;
     });
     console.log(`${results} (Each number should be 15 greater than before the loop)`);
 
-    // Replaced for loop with every
+    // Replaced for loop with .every
     let below30 = myArray.every(function(value){
       return value < 30;
     })
     console.log(`Every number is above 30 is ${below30}`);
 
-    // Replaced for loop with filter
+    // Replaced for loop with .filter
     let over50 = myArray.filter(function(value){
         return value > 50;
     });
     console.log(`Here is the array for every number above 50 = ${over50}`);
 
-    // Replaced for loop with sum
+    // Replaced for loop with .sum
     let sum = myArray.reduce(function(sum,value){
       return sum + value;
     })
