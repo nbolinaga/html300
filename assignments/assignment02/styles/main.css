@@ -20,7 +20,7 @@ body {
   height: 30%;
   background-color: #ffffff;
   padding: 2.5rem;
-  border: 3rem solid #f5f5f5;
+  border: 3rem solid #f8f8f8;
   margin-top: 10%;
   font-size: 1.4rem;
   display: -ms-grid;
@@ -29,13 +29,34 @@ body {
       grid-template-columns: 31.25% 6.25% 62.5%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "left . right";
+      grid-template-areas: " left    .    right  ";
+}
+
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card {
+    width: 90%;
+    margin-top: 0;
+    border: 1rem solid #f8f8f8;
+    padding: .8rem;
+    -ms-grid-columns: 5% 90% 5%;
+        grid-template-columns: 5% 90% 5%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: ". left ." ". right .";
+  }
 }
 
 .employee-card-main {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
+}
+
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card-main {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
 }
 
 .employee-card-main-img {
@@ -65,8 +86,14 @@ body {
   -ms-grid-column: 3;
   grid-area: right;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   padding-top: .8rem;
+}
+
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card-aside {
+    font-size: 1rem;
+  }
 }
 
 .employee-card-aside ul {
@@ -75,8 +102,23 @@ body {
           padding-inline-start: 30px;
 }
 
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card-aside ul {
+    list-style: none;
+    -webkit-padding-start: 10px;
+            padding-inline-start: 10px;
+    text-align: center;
+  }
+}
+
 .employee-card-aside ul li {
   margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card-aside ul li {
+    margin-top: .8rem;
+  }
 }
 
 .employee-card-aside ul p {
@@ -87,6 +129,13 @@ body {
       align-content: center;
 }
 
+@media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
+  .employee-card-aside ul p {
+    display: inline;
+    margin: 0 auto 0 auto;
+  }
+}
+
 .employee-card-aside ul p img {
   padding: 0;
   margin-left: 0;
@@ -94,37 +143,6 @@ body {
 }
 
 @media only screen and (max-width: 1020px) and (-webkit-min-device-pixel-ratio: 2) {
-  .employee-card {
-    width: 90%;
-    margin-top: 0;
-    border: 1rem solid #f5f5f5;
-    padding: .8rem;
-    -ms-grid-columns: 5% 90% 5%;
-        grid-template-columns: 5% 90% 5%;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: ". left ." ". right .";
-  }
-  .employee-card-main {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-  .employee-card-aside {
-    font-size: 1rem;
-  }
-  .employee-card-aside ul {
-    list-style: none;
-    -webkit-padding-start: 10px;
-            padding-inline-start: 10px;
-    text-align: center;
-  }
-  .employee-card-aside ul li {
-    margin-top: .8rem;
-  }
-  .employee-card-aside ul p {
-    display: inline;
-    margin: 0 auto 0 auto;
-  }
   .employee-card-aside ul p img {
     display: block;
     width: 20px;
